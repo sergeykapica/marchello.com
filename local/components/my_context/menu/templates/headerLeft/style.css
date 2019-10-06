@@ -1,0 +1,92 @@
+.content-menu {
+    margin: 0;
+    padding: 0;
+    color: #ad9787;
+    list-style: none;
+}
+
+.content-menu-item {
+    margin-bottom: 10px;
+}
+
+.item-url {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 0 25%;
+    color: inherit;
+    text-decoration: none;
+    padding-left: 29px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.item-url:hover {
+    text-decoration: none;
+    color: #f5ac77;
+}
+
+.item-url:hover .item-text::after {
+    width: 100%;
+    transition: width 1s cubic-bezier(.16,.14,0,1.01) 0s;
+    -webkit-transition: width 1s cubic-bezier(.16,.14,0,1.01) 0s;
+    -o-transition: width 1s cubic-bezier(.16,.14,0,1.01) 0s;
+    -moz-transition: width 1s cubic-bezier(.16,.14,0,1.01) 0s;
+}
+
+.item-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url(/local/templates/marchello/images/our/profile-menu-icons.png) no-repeat;
+    background-size: 192px;
+}
+
+.item-main-url .item-icon {
+    background-position: 0;
+}
+
+.item-about-url .item-icon {
+    background-position: -24px 0;
+}
+
+.item-services-url .item-icon {
+    background-position: -48px 0;
+}
+
+.item-skills-url .item-icon {
+    background-position: -72px 0;
+}
+
+.item-education-url .item-icon {
+    background-position: -96px 0;
+}
+
+.item-experience-url .item-icon {
+    background-position: -120px 0;
+}
+
+.item-work-url .item-icon {
+    background-position: -144px 0;
+}
+
+.item-contacts-url .item-icon {
+    background-position: -168px 0;
+}
+
+.item-text {
+    position: relative;
+}
+
+.item-text::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: #f5ac77;
+}

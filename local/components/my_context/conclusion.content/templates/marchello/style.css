@@ -1,0 +1,202 @@
+.content-about-content {
+    margin-bottom: 40px; 
+    text-align: justify;
+}
+
+.about-icon-wrapper {
+    width: 30.66%;
+    float: left;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-bottom: 4%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(offX=0, offY=10, color=#000000);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=0, color=#000000, strength=10);
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.about-icon-indentation {
+    margin-right: 4%;
+}
+
+.about-icon-wrapper > div {
+    float: left;
+}
+
+.about-icon {
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    margin: 20px 0;
+}
+
+.about-text {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.content-about-created {
+    margin: 20px 0;
+    background-color: #FFE06D;
+    color: #000;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(offX=0, offY=10, color=#000000);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=0, color=#000000, strength=10);
+}
+
+.about-created-message {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.about-created-button {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.about-created-button:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-services-items, .services-item-data, .content-services-statistic {
+    width: 100%;
+    float: left;
+}
+
+.content-services-items {
+    margin-bottom: 100px;
+}
+
+.content-services-item {
+    width: 23.5%;
+    float: left;
+    background-color: #fff;
+    margin-top: 70.71px;
+    margin-bottom: 20px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.services-indentation {
+    margin-right: 2%;
+}
+
+.item-icon-wrapper {
+    position: relative;
+    left: -70.71px;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.services-item-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    -webkit-transform: rotate(-315deg);
+    -moz-transform: rotate(-315deg);
+    -ms-transform: rotate(-315deg);
+    -o-transform: rotate(-315deg);
+    transform: rotate(-315deg);
+}
+
+.services-item-data {
+    margin: 0 0 40px 0;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.services-item-headline {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.services-item-description {
+    color: #545251;
+}
+
+.content-services-statistic {
+    position: relative;
+    min-height: 300px;
+    background: url(/local/templates/marchello/images/our/main-image2.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 20px 0;
+    padding: 100px 40px;
+}
+
+.services-statistic-items {
+    position: relative;
+    width: 100%;
+    float: left;
+    min-height: 100px;
+    z-index: 2;
+}
+
+.services-statistic-item {
+    width: 21.25%;
+    float: left;
+    text-align: center;
+    color: #fff;
+}
+
+.services-statistic-indentation {
+    margin-right: 5%;
+}
+
+.statistic-item-result {
+    display: block;
+    width: 100%;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.statistic-item-name {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.services-statistic-lining {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
