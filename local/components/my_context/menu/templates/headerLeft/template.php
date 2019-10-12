@@ -43,6 +43,8 @@ $menuBlockId = "catalog_menu_".$this->randString();
                 <a href="<?=$arResult["ALL_ITEMS"][$itemID]['LINK'];?>" class="item-url item-experience-url">
             <?elseif($arResult["ALL_ITEMS"][$itemID]['PARAMS']['ITEM_URL'] == 'ITEM_WORK_URL'):?>
                 <a href="<?=$arResult["ALL_ITEMS"][$itemID]['LINK'];?>" class="item-url item-work-url">
+            <?elseif($arResult["ALL_ITEMS"][$itemID]['PARAMS']['ITEM_URL'] == 'ITEM_OUR_CHAT_URL'):?>
+                <a href="<?=$arResult["ALL_ITEMS"][$itemID]['LINK'];?>" class="item-url item-chat-url">
             <?elseif($arResult["ALL_ITEMS"][$itemID]['PARAMS']['ITEM_URL'] == 'ITEM_CONTACTS_URL'):?>
                 <a href="<?=$arResult["ALL_ITEMS"][$itemID]['LINK'];?>" class="item-url item-contacts-url">
             <?endif;?>

@@ -41,8 +41,8 @@
     left: 0;
     width: 24px;
     height: 24px;
-    background: url(/local/templates/marchello/images/our/profile-menu-icons.png) no-repeat;
-    background-size: 192px;
+    background: url(/local/templates/marchello/images/our/profile-menu-icons1.png) no-repeat;
+    background-size: 216px;
 }
 
 .item-main-url .item-icon {
@@ -71,6 +71,10 @@
 
 .item-work-url .item-icon {
     background-position: -144px 0;
+}
+
+.item-chat-url .item-icon {
+    background-position: -192px 0;
 }
 
 .item-contacts-url .item-icon {

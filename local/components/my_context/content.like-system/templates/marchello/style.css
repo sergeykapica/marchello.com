@@ -1,0 +1,47 @@
+.work-statistic-views, .work-statistic-likes {
+    position: relative;
+    width: 20%;
+    float: left;
+    padding: 5px 5px 5px 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.work-statistic-views {
+    margin-right: 5%;
+}
+
+.statistic-views-icon, .statistic-likes-icon {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: url(images/work-statistic-icons-list.png) no-repeat;
+    background-size: 60px;
+}
+
+.statistic-likes-icon {
+    cursor: pointer;   
+}
+
+.statistic-views-icon {
+    background-position: 0;
+}
+
+.statistic-likes-icon {
+    background-position: -20px 0;
+}
+
+.likes-icon-active {
+    background-position: -40px 0;
+}
+
+.statistic-views-value, .statistic-likes-value {
+    width: 100%;
+    text-align: center;
+}

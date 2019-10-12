@@ -138,6 +138,170 @@ if(isset($arParams['IBLOCK_CODE']))
                 $arResult['STATISTIC_OF_WORK'] = $statisticOfWorkList; 
             }
         }
+        else if($arParams['IBLOCK_CODE'] === 'skills')
+        {
+            function convertPercentsToDeg($percent)
+            {
+                return ( $percent / 100 ) * 360;
+            }
+            
+            $arSelect = array(
+                'ID',
+                'IBLOCK_ID',
+                'DATE_ACTIVE_FROM',
+                'NAME',
+                'DETAIL_TEXT',
+                'PROPERTY_SKILLS_COLOR',
+                'PROPERTY_SKILLS_PERCENT'
+            );
+            
+            $skillsSelection = CIBlockElement::GetList(array('DATE_ACTIVE_FROM' => 'ASC'), $arFilter, false, false, $arSelect);
+            
+            if($skillsSelection)
+            {
+                while($skill = $skillsSelection->GetNext())
+                {
+                    if($skill['DETAIL_TEXT'] != '')
+                    {
+                         $arResult['IBLOCK_DESCRIPTION'][] = $skill['DETAIL_TEXT'];
+                    }
+                    else
+                    {      
+                        $deg = convertPercentsToDeg($skill['PROPERTY_SKILLS_PERCENT_VALUE']);
+                        
+                        if($deg >= 180)
+                        {  
+                            $skill['CIRCLE_LEFT'] = $deg;
+                            $skill['CIRCLE_RIGHT'] = 180;
+                        }
+                        else
+                        {
+                            $skill['CIRCLE_LEFT'] = 0;
+                            $skill['CIRCLE_RIGHT'] = $deg;
+                        }
+                        
+                        $arResult['INFORMATION_DATA'][] = $skill;
+                    }
+                }
+            }
+        }
+        else if($arParams['IBLOCK_CODE'] === 'education')
+        {
+            $arSelect = array(
+                'ID',
+                'IBLOCK_ID',
+                'DATE_ACTIVE_FROM',
+                'NAME',
+                'DETAIL_TEXT'
+            );
+            
+            $educationSelection = CIBlockElement::GetList(array('DATE_ACTIVE_FROM' => 'ASC'), $arFilter, false, false, $arSelect);
+            
+            if($educationSelection)
+            {
+                while($education = $educationSelection->GetNext())
+                {
+                    $arResult['INFORMATION_DATA'][] = $education;
+                }
+            }
+        }
+        else if($arParams['IBLOCK_CODE'] === 'experience')
+        {
+            $arSelect = array(
+                'ID',
+                'IBLOCK_ID',
+                'DATE_ACTIVE_FROM',
+                'NAME',
+                'DETAIL_TEXT',
+                'PROPERTY_EXPERIENCE_YEARS',
+                'PROPERTY_EXPERIENCE_COLOR'
+            );
+            
+            $experienceSelection = CIBlockElement::GetList(array('DATE_ACTIVE_FROM' => 'ASC'), $arFilter, false, false, $arSelect);
+            
+            if($experienceSelection)
+            {
+                while($experience = $experienceSelection->GetNext())
+                {
+                    $arResult['INFORMATION_DATA'][] = $experience;
+                }
+            }
+        }
+        else if($arParams['IBLOCK_CODE'] === 'work')
+        {
+            // Get views items
+            
+            $currentIP = $_SERVER['REMOTE_ADDR'];
+            
+            $arFilterViews = array(
+                'IBLOCK_ID' => 10
+            );
+            
+            $arSelectViews = array(
+                'ID',
+                'IBLOCK_ID',
+                'DATE_ACTIVE_FROM',
+                'NAME',
+                'PROPERTY_USER_IP',
+                'PROPERTY_IBLOCK_ID',
+                'PROPERTY_IBLOCK_ELEMENT_ID'
+            );
+            
+            $viewsSelection = CIBlockElement::GetList(array('DATE_ACTIVE_FROM' => 'ASC'), $arFilterViews, false, false, $arSelectViews);
+            
+            if($viewsSelection)
+            {
+                $viewsList = array();
+                
+                while($view = $viewsSelection->GetNext())
+                {
+                    $view['PROPERTY_SITE_PHOTO_VALUE'] = CFile::GetPath($view['PROPERTY_SITE_PHOTO_VALUE']);
+                    
+                    $viewsList[] = $view;
+                }
+            }
+            
+            // Get work items
+            
+            $arNavParams = array(
+                'bShowAll' => false,
+                'nPageSize' => 1
+            );
+            
+            $arSelect = array(
+                'ID',
+                'IBLOCK_ID',
+                'DATE_ACTIVE_FROM',
+                'NAME',
+                'PROPERTY_SITE_URL',
+                'PROPERTY_SITE_PHOTO'
+            );
+            
+            $worksSelection = CIBlockElement::GetList(array('DATE_ACTIVE_FROM' => 'ASC'), $arFilter, false, $arNavParams, $arSelect);
+            
+            if($worksSelection)
+            {
+                while($work = $worksSelection->GetNext())
+                {
+                    $work['PROPERTY_SITE_PHOTO_VALUE'] = CFile::GetPath($work['PROPERTY_SITE_PHOTO_VALUE']);
+                    
+                    if(isset($viewsList))
+                    {
+                        foreach($viewsList as $viewValue)
+                        {
+                            if($viewValue['PROPERTY_USER_IP_VALUE'] == $currentIP && $work['ID'] == $viewValue['PROPERTY_IBLOCK_ELEMENT_ID_VALUE'])
+                            {
+                                $work['VIEW'] = true;
+                            }
+                        }
+                    }
+                    
+                    $arResult['INFORMATION_DATA'][] = $work;
+                }
+                
+                $arResult['NAV_PAGE_STRING'] = $worksSelection->GetPageNavStringEx($backNavigation = false, 'Works', 'marchello', false, false, $arNavParams);
+            }
+        }
     }
 }
 

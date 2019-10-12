@@ -1,7 +1,7 @@
 <section class="main-content-section main-content-services">
 	<div class="content-headline">
-		<div class="content-headline-h1">Услуги</div>
-		<div class="content-headline-h2">Чем я занимаюсь?</div>
+		<div class="content-headline-h1"><?=GetMessage('SERVICES_H1');?></div>
+		<div class="content-headline-h2"><?=GetMessage('SERVICES_H2');?></div>
 	</div>
 	<?/*<div class="content-services-items">
 		<div class="content-services-item services-innovate-ideas services-indentation">

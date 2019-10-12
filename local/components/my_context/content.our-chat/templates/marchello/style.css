@@ -1,0 +1,585 @@
+.content-chat-wrapper {
+    position: relative;
+    width: 100%;
+    height: 840px;
+}
+
+.content-chat-left, .content-chat-right {
+    float: left;
+}
+
+.content-chat-left {
+    width: 30%;
+    height: inherit;
+    background-color: #086FA1;
+    padding: 20px 10px;
+    overflow-y: auto;
+}
+
+.content-chat-right {
+    width: 70%;
+    height: inherit;
+    background-color: #fff;
+    padding: 20px 10px;
+}
+
+.chat-left-section, .chat-right-section {
+    position: relative;
+    width: 100%;
+    min-height: 70px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.chat-left-section {
+    padding: 10px 10px 10px 70px;
+}
+
+.chat-right-section {
+    padding: 10px 10px 10px 100px;
+}
+
+.chat-left-section:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.chat-left-icon, .chat-right-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -o-border-radius: 50px;
+    -khtml-border-radius: 50px;
+}
+
+.chat-left-icon {
+    border-color: #f5ac77;
+}
+
+.chat-right-icon {
+    border-color: #E8AE79;
+}
+
+.chat-left-user {
+    color: #fff;
+}
+
+.chat-right-text {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    background-color: #E8AE79;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    padding: 10px;
+}
+
+.chat-right-text::after {
+    position: absolute;
+    top: 0;
+    left: -14px;
+    content: "";
+    border-top: 25px solid transparent;
+    border-right: 15px solid #E8AE79;
+    border-bottom: 25px solid transparent;
+}
+
+.chat-right-footer {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.chat-footer-data {
+    width: 70%;
+    float: right;
+    text-align: right;
+}
+
+.footer-data-inicials {
+    font-weight: bold;
+}
+
+.footer-data-date {
+    color: #383535;
+}
+
+.chat-right-messages {
+    width: 100%;
+    height: 400px;
+    float: left;
+    overflow-y: auto;
+}
+
+.chat-form-wrapper {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+.chat-form-container {
+    width: 100%;
+    float: left;
+}
+
+.chat-form-message {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    resize: none;
+    margin-bottom: 20px;
+    border: 1px solid #6A6A73;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    outline: 0;
+    overflow-y: scroll;
+}
+
+.chat-form-message:focus {
+    border-color: #E8AE79;
+}
+
+.cform-footer-left, .cform-footer-right {
+    float: left;
+}
+
+.cform-footer-left {
+    width: 68%;
+    margin-right: 2%;
+}
+
+.cform-footer-right {
+    width: 30%;
+}
+
+.cform-icon {
+    width: 30px;
+    height: 30px;
+    background: url(/local/templates/marchello/images/our/chat-form-icons.png) no-repeat;
+    background-size: 60px;
+    float: left;
+    cursor: pointer;
+}
+
+.cform-icon-smiles {
+    background-position: 0 0;
+    margin-right: 10px;
+}
+
+.cform-icon-images {
+    background-position: -30px 0;
+}
+
+.cform-submit-button {
+    display: inline-block;
+    width: 100%;
+    background-color: #086FA1;
+    color: #000;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.chat-form-input {
+    display: block;
+    width: 50%;
+    padding: 5px;
+    color: #000;
+    margin-bottom: 20px;
+    outline: 0;
+    border: 1px solid #6A6A73;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px; 
+}
+
+.chat-form-input:focus {
+    border-color: #E8AE79;
+}
+
+.online-list-empty, .messages-list-empty {
+    text-align: center;
+}
+
+.chat-system-section {
+    width: 100%;
+    min-height: 70px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.chat-system-text {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    background-color: #AD9087;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-right-messages::-webkit-scrollbar {
+    width: 1em;
+    background-color: #fff;
+}
+
+.chat-right-messages::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+.chat-right-messages::-webkit-scrollbar-thumb {
+    background-color: #086FA1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.content-chat-left::-webkit-scrollbar {
+    width: 1em;
+    background-color: #086FA1;
+}
+
+.content-chat-left::-webkit-scrollbar-track {
+    background-color: #086FA1;
+}
+
+.content-chat-left::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.chat-admin-functions {
+    padding-right: 45px;
+}
+
+.admin-functions-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 60px;
+}
+
+.admin-ban-button, .admin-unban-button {
+    width: 25px;
+    height: 25px;
+    background: url(images/ban-system-icons.png) no-repeat;
+    background-size: 50px;
+}
+
+.admin-ban-button {
+    position: relative;
+    background-position: 0 0;
+}
+
+.admin-unban-button {
+    background-position: -25px 0;
+}
+
+.ban-button-popup {
+    display: none;
+    position: absolute;
+    width: 250px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    z-index: 20;
+}
+
+.ban-popup-section, .popup-section {
+    position: relative;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.popup-section-headline {
+    font-weight: bold;
+}
+
+.popup-section-icon {
+    padding-right: 26px;
+}
+
+.popup-close-icon {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url(images/close-popup-button.png) no-repeat center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.popup-section-input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #6A6A73;
+    outline: 0;
+}
+
+.popup-section-submit {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: #086FA1;
+    outline: 0;
+    border: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.popup-section-answer {
+    position: relative;
+}
+
+.banned-notification {
+    width: 100%;
+    min-height: 70px;
+    float: left;
+    margin: 20px 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.banned-notification-left, .banned-notification-right {
+    min-height: inherit;
+    float: left;
+    padding: 10px;
+}
+
+.banned-notification-left {
+    width: 20%;
+    background-color: #FF251B;
+}
+
+.banned-notification-right {
+    width: 80%;
+    background-color: #FF7069;
+    color: #fff;
+}
+
+.banned-notification-icon {
+    width: 50px;
+    height: 50px;
+    background: url(images/warning-icon.png) no-repeat center;
+    background-size: 50px;
+    margin: 0 auto;
+}
+
+.bbeditor-popups-wrapper {
+    position: relative;
+    width: 100%;
+    float: left;
+}
+
+.bbeditor-popup {
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.dropshadow(offX=0, offY=0, color=#000000);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=0, color=#000000, strength=5px);
+}
+
+.insert-smiles-popup {
+    left: 0;
+    width: 100%;
+    padding-right: 26px;
+}
+
+.insert-image-popup {
+    display: none;
+    left: 40px;
+    width: 50%;
+}
+
+.popup-with-close {
+    position: relative;
+    padding-right: 26px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url(images/close-popup-button.png) no-repeat center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.popup-form-submit {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: #086FA1;
+    outline: 0;
+    border: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    -khtml-border-radius: 3px;
+}
+
+.smiles {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(images/smiles/smiles.png) no-repeat;
+    background-size: 500px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.smile-amazing {
+    background-position: 0 0;
+}
+
+.smile-happy {
+    background-position: -20px 0;
+}
+
+.smile-angry {
+    background-position: -40px 0;
+}
+
+.smile-full {
+    background-position: -60px 0;
+}
+
+.smile-blush {
+    background-position: -80px 0;
+}
+
+.smile-bored {
+    background-position: -100px 0;
+}
+
+.smile-cool {
+    background-position: -120px 0;
+}
+
+.smile-crazy {
+    background-position: -140px 0;
+}
+
+.smile-crying {
+    background-position: -160px 0;
+}
+
+.smile-muted {
+    background-position: -180px 0;
+}
+
+.smile-laugh {
+    background-position: -200px 0;
+}
+
+.smile-cute {
+    background-position: -220px 0;
+}
+
+.smile-excited {
+    background-position: -240px 0;
+}
+
+.smile-meh {
+    background-position: -260px 0;
+}
+
+.smile-pain {
+    background-position: -280px 0;
+}
+
+.smile-relax {
+    background-position: -300px 0;
+}
+
+.smile-sad {
+    background-position: -320px 0;
+}
+
+.smile-sad-1 {
+    background-position: -340px 0;
+}
+
+.smile-sceptic {
+    background-position: -360px 0;
+}
+
+.smile-shocked {
+    background-position: -380px 0;
+}
+
+.smile-shocked-1 {
+    background-position: -400px 0;
+}
+
+.smile-smile {
+    background-position: -420px 0;
+}
+
+.smile-smile-1 {
+    background-position: -440px 0;
+}
+
+.smile-wink {
+    background-position: -460px 0;
+}
+
+.smile-sleepy {
+    background-position: -480px 0;
+}

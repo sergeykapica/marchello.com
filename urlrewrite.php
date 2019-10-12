@@ -24,6 +24,22 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/ymarket/index.php',
     'SORT' => 100,
   ),
+  6 => 
+  array (
+    'CONDITION' => '#^/actions/set-likes.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/set-likes.php',
+    'SORT' => 100,
+  ),
+  7 => 
+  array (
+    'CONDITION' => '#^/actions/set-views.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/set-views.php',
+    'SORT' => 100,
+  ),
   2 => 
   array (
     'CONDITION' => '#^/online/(/?)([^/]*)#',
@@ -48,4 +64,52 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
+  8 => 
+  array (
+    'CONDITION' => '#^/actions/set-to-online-list.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/set-to-online-list.php',
+    'SORT' => 100,
+  ),
+  9 => 
+  array (
+    'CONDITION' => '#^/actions/unset-to-online-list.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/unset-to-online-list.php',
+    'SORT' => 100,
+  ),
+  10 => 
+  array (
+    'CONDITION' => '#^/actions/add-chat-message-to-db.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/add-chat-message-to-db.php',
+    'SORT' => 100,
+  ),
+  11 => 
+  array (
+    'CONDITION' => '#^/actions/get-new-messages-from-chat.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/get-new-messages-from-chat.php',
+    'SORT' => 100,
+  ),
+  12 => 
+  array (
+    'CONDITION' => '#^/actions/get-online-list.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/get-online-list.php',
+    'SORT' => 100,
+  ),
+  13 =>
+  array (
+    'CONDITION' => '#^/actions/chat-ban-system.php#',
+    'RULE' => '',
+    'ID' => NULL,
+    'PATH' => '/local/php_interface/include_files/Actions/chat-ban-system.php',
+    'SORT' => 100,
+  )
 );

@@ -48,6 +48,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/content/work.php');
 <div class="main-content-separator"></div>
 
 <?
+require_once($_SERVER['DOCUMENT_ROOT'] . '/content/our-chat.php');
+?>
+
+<div class="main-content-separator"></div>
+
+<?
 require_once($_SERVER['DOCUMENT_ROOT'] . '/content/contacts.php');
 ?>
 
